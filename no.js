@@ -139,7 +139,7 @@ const elementData = [
 
 function getCategory(number) {
 
-    if ([2,10,18,36,54,86,118].includes(number)) {
+    if ([2,10,18,36,54,86].includes(number)) {
         return "Noble Gas";
     }
 
@@ -159,27 +159,27 @@ function getCategory(number) {
         return "Actinide";
     }
 
-    if ([5,14,32,33,51,52].includes(number)) {
+    if ([5,14,32,33,51,52,85].includes(number)) {
         return "Metalloid";
     }
 
-    if ([9,17,35,53,85,117].includes(number)) {
-        return "Halogen";
+    if ([109,110,111,113,114,115,116,117,118].includes(number)) {
+        return "Unknown Chemical Properties";
     }
 
-    if ([1,6,7,8,15,16,34].includes(number)) {
-        return "Nonmetal";
+    if ([1,6,7,8,9,15,16,17,34,35,53].includes(number)) {
+        return "Reactive Nonmetal";
     }
 
-    if ([13,31,49,50,81,82,83,84,113,114,115,116].includes(number)) {
+    if ([13,30,31,48,49,50,80,81,82,83,84,112].includes(number)) {
         return "Post-Transition Metal";
     }
 
     if (
-        (number >= 21 && number <= 30) ||
-        (number >= 39 && number <= 48) ||
-        (number >= 72 && number <= 80) ||
-        (number >= 104 && number <= 112)
+        (number >= 21 && number <= 29) ||
+        (number >= 39 && number <= 47) ||
+        (number >= 72 && number <= 79) ||
+        (number >= 104 && number <= 108)
     ) {
         return "Transition Metal";
     }
@@ -200,8 +200,8 @@ function getCategoryClass(category) {
         "Transition Metal": "transition-metal",
         "Post-Transition Metal": "post-transition-metal",
         "Metalloid": "metalloid",
-        "Nonmetal": "nonmetal",
-        "Halogen": "halogen",
+        "Reactive Nonmetal": "nonmetal",
+        "Unknown Chemical Properties": "unknown",
         "Noble Gas": "noble-gas",
         "Lanthanide": "lanthanide",
         "Actinide": "actinide",
@@ -285,8 +285,8 @@ const legendData = [
     ["Transition Metal", "transition-metal"],
     ["Post-Transition Metal", "post-transition-metal"],
     ["Metalloid", "metalloid"],
-    ["Nonmetal", "nonmetal"],
-    ["Halogen", "halogen"],
+    ["Reactive Nonmetal", "nonmetal"],
+    ["Unknown Chemical Properties", "unknown"],
     ["Noble Gas", "noble-gas"],
     ["Lanthanide", "lanthanide"],
     ["Actinide", "actinide"]

@@ -63,7 +63,7 @@ header h1 {
 }
 
 header p {
-    color: #aaa;
+    color: #bb6c60;
 
     font-size: clamp(15px, 1.5vw, 24px);
     font-family: 'Michland Script', cursive;
@@ -130,10 +130,10 @@ header p {
 
     padding: 3px;
 
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 249, 249, 0.4);
     border-radius: 5px;
 
-    color: white;
+    color: #fff9f9;
     cursor: pointer;
 
     transition: 0.2s ease;
@@ -199,42 +199,46 @@ header p {
 
 .transition-metal {
     background-color: #e6c84c;
-    color: black;
+    color: #59434A;
 }
 
 .post-transition-metal {
     background-color: #65c7a5;
-    color: black;
+    color: #59434A;
 }
 
 .metalloid {
     background-color: #42a5d5;
+    color: #59434A;
 }
 
 .nonmetal {
     background-color: #7c83e8;
+    color: #59434A;
 }
 
 .halogen {
     background-color: #bb77e8;
+    color: #59434A;
 }
 
 .noble-gas {
     background-color: #ed8bc2;
+    color: #59434A;
 }
 
 .lanthanide {
     background-color: #55c6c1;
-    color: black;
 }
 
 .actinide {
     background-color: #91a7e8;
-    color: black;
+    color: #59434A;
 }
 
 .unknown {
-    background-color: #777;
+    background-color: #bed38c;
+    color: #59434A;
 }
 
 /* =========================================
@@ -294,7 +298,7 @@ header p {
     width: 100vw;
     height: 100vh;
 
-    background: rgba(0, 0, 0, 0.80);
+    background: rgba(245, 178, 185, 0.8);
     backdrop-filter: blur(5px);
 
     z-index: 999999;
@@ -328,15 +332,15 @@ header p {
 
     margin: auto;
 
-    background-color: #151515;
-    color: white;
+    background-color: #f1d5d5;
+    color: #59434A;
 
-    border: 2px solid #555;
+    border: 2px solid #c97a77;
     border-radius: 15px;
 
     padding: 30px;
 
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 35px rgba(199, 126, 111, 0.8);
 
     animation: popupAnimation 0.25s ease;
 }
@@ -377,7 +381,7 @@ header p {
     background: transparent;
     border: none;
 
-    color: white;
+    color: #59434A;
     font-size: 30px;
 
     cursor: pointer;
@@ -386,7 +390,7 @@ header p {
 }
 
 .closeButton:hover {
-    color: #ff5555;
+    color: #e14d6f;
     transform: scale(1.15);
 }
 
@@ -403,7 +407,7 @@ header p {
     margin-bottom: 25px;
     padding-bottom: 20px;
 
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #5f2317;
 }
 
 .modalSymbol {
@@ -416,7 +420,7 @@ header p {
     align-items: center;
     justify-content: center;
 
-    border: 2px solid white;
+    border: 2px solid #db8891;
     border-radius: 10px;
 
     font-size: 40px;
@@ -429,7 +433,7 @@ header p {
 }
 
 .modalTitle p {
-    color: #aaa;
+    color: #c97a77;
     font-size: 14px;
 }
 
@@ -443,19 +447,19 @@ header p {
 }
 
 .modalInfo h3 {
-    color: white;
+    color: #5f2317;
 
     margin-top: 20px;
     margin-bottom: 8px;
 }
 
 .modalInfo p {
-    color: #ccc;
+    color: #c27e6b;
     margin: 5px 0;
 }
 
 .modalInfo strong {
-    color: white;
+    color: #59434A;
 }
 
 /* =========================================
