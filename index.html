@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Periodic Table of Elements</title>
+
+    <link rel="stylesheet" href="./style.css?v=2">
+
+    <script src="./no.js" defer></script>
+    <script src="./popup.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Periodic Table of Elements</h1>
+        <p>Click an element to learn more about it.</p>
+    </header>
+
+    <!-- PERIODIC TABLE -->
+    <main>
+        <div class="tableWrapper">
+            <div class="periodicTable" id="displayTable"></div>
+        </div>
+    </main>
+
+    <!-- POPUP: KEEP THIS OUTSIDE THE MAIN TABLE -->
+    <div class="modalContainer" id="modalContainer">
+
+        <div class="modalBox" id="modalBox">
+
+            <!-- X BUTTON -->
+            <button
+                class="closeButton"
+                id="closeModal"
+                type="button"
+                aria-label="Close popup"
+            >
+                &times;
+            </button>
+
+            <!-- POPUP HEADER -->
+            <div class="modalHeader">
+
+                <div class="modalSymbol" id="modalSymbol"></div>
+
+                <div class="modalTitle">
+                    <h2 id="modalName"></h2>
+                    <p id="modalAtomicNumber"></p>
+                </div>
+
+            </div>
+
+            <!-- POPUP INFORMATION -->
+            <div class="modalInfo" id="modalInfo"></div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

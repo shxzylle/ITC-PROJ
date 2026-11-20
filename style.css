@@ -1,0 +1,396 @@
+
+/* =========================================
+   ITO UNG GENERAL STYLING
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fad2ee;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* =========================================
+   PERIODIC TABLE
+========================================= */
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.periodicTable {
+    display: grid;
+
+    grid-template-columns: repeat(18, minmax(60px, 1fr));
+    grid-template-rows: repeat(7, 90px) 30px 90px 90px;
+
+    gap: 5px;
+    min-width: 1200px;
+}
+
+/* =========================================
+   ELEMENT BOXES
+========================================= */
+
+.element {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+
+    color: white;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.element:hover {
+    transform: scale(1.12);
+    z-index: 10;
+
+    box-shadow: 0 0 15px white;
+    filter: brightness(1.3);
+}
+
+.number {
+    font-size: 11px;
+}
+
+.symbol {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.name {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* =========================================
+   ELEMENT CATEGORIES
+========================================= */
+
+.alkali-metal {
+    background-color: #e85d75;
+}
+
+.alkaline-earth {
+    background-color: #f59e42;
+}
+
+.transition-metal {
+    background-color: #e6c84c;
+    color: black;
+}
+
+.post-transition-metal {
+    background-color: #65c7a5;
+    color: black;
+}
+
+.metalloid {
+    background-color: #42a5d5;
+}
+
+.nonmetal {
+    background-color: #7c83e8;
+}
+
+.halogen {
+    background-color: #bb77e8;
+}
+
+.noble-gas {
+    background-color: #ed8bc2;
+}
+
+.lanthanide {
+    background-color: #55c6c1;
+    color: black;
+}
+
+.actinide {
+    background-color: #91a7e8;
+    color: black;
+}
+
+.unknown {
+    background-color: #777;
+}
+
+/* =========================================
+   CATEGORY LEGEND
+========================================= */
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 12px;
+    padding: 25px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 12px;
+}
+
+.legendColor {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+/* =========================================
+   POPUP OVERLAY
+========================================= */
+
+#modalContainer {
+    display: none;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(5px);
+
+    z-index: 999999;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+/* SHOW POPUP */
+
+#modalContainer.active {
+    display: flex !important;
+}
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+#modalBox {
+    position: relative;
+
+    width: 550px;
+    max-width: 100%;
+
+    max-height: 85vh;
+    overflow-y: auto;
+
+    margin: auto;
+
+    background-color: #151515;
+    color: white;
+
+    border: 2px solid #555;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+
+    animation: popupAnimation 0.25s ease;
+}
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes popupAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================================
+   X CLOSE BUTTON
+========================================= */
+
+.closeButton {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.closeButton:hover {
+    color: #ff5555;
+    transform: scale(1.15);
+}
+
+/* =========================================
+   POPUP HEADER
+========================================= */
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #444;
+}
+
+.modalSymbol {
+    width: 100px;
+    height: 100px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid white;
+    border-radius: 10px;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.modalTitle h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.modalTitle p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* =========================================
+   POPUP INFORMATION
+========================================= */
+
+.modalInfo {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.modalInfo h3 {
+    color: white;
+
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.modalInfo p {
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.modalInfo strong {
+    color: rgb(0, 0, 0);
+}
+
+/* =========================================
+   RESPONSIVE POPUP
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .modalBox {
+        padding: 20px;
+    }
+
+    .modalHeader {
+        gap: 12px;
+    }
+
+    .modalSymbol {
+        width: 75px;
+        height: 75px;
+        font-size: 30px;
+    }
+
+    .modalTitle h2 {
+        font-size: 22px;
+    }
+
+    .modalInfo {
+        font-size: 14px;
+    }
+
+}
