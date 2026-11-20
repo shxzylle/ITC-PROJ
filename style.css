@@ -2,6 +2,17 @@
 /* =========================================
    ITO UNG GENERAL STYLING
 ========================================= */
+@font-face {
+    font-family: 'Muthiara';
+    src: url('fonts/Muthiara.otf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Cream Cake';
+    src: url('fonts/Cream\ Cake.otf') format('truetype');
+}
+
 
 * {
     margin: 0;
@@ -10,11 +21,11 @@
 }
 
 body {
-    background-color: #fad2ee;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* =========================================
@@ -27,13 +38,20 @@ header {
 }
 
 header h1 {
-    font-size: 35px;
-    margin-bottom: 10px;
+    border: 5px dashed pink;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'Muthiara', cursive;
+    font-size: 75px;   
+    margin-top: 10px; 
+    color: #E94B72
+    
 }
 
 header p {
     color: #aaa;
-    font-size: 15px;
+    font-size: 50px;
+    font-family: 'Cream Cake', cursive;
 }
 
 /* =========================================
@@ -82,7 +100,7 @@ header p {
     transform: scale(1.12);
     z-index: 10;
 
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 15px rgb(112, 17, 91);
     filter: brightness(1.3);
 }
 
