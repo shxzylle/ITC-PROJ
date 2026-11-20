@@ -15,27 +15,35 @@
 
 <body>
 
-   <header>
-    <h1>Periodic Table of Elements</h1>
-    <p>Click an element to learn more about it.</p>
-</header>
+    <!-- HEADER -->
+    <header>
+        <h1>Periodic Table of Elements</h1>
+    </header>
 
-<!-- CATEGORY LEGEND -->
-<div class="legendContainer" id="legendContainer"></div>
+    <!-- PERIODIC TABLE -->
+    <main>
+        <div class="tableWrapper">
 
-<!-- PERIODIC TABLE -->
-<main>
-    <div class="tableWrapper">
-        <div class="periodicTable" id="displayTable"></div>
-    </div>
-</main>
+            <!-- CATEGORY LEGEND -->
+            <div class="legendContainer" id="legendContainer"></div>
 
-    <!-- POPUP: KEEP THIS OUTSIDE THE MAIN TABLE -->
+            <!-- SUBTITLE -->
+            <p class="tableSubtitle">
+                Click an element to learn more about it!
+            </p>
+
+            <!-- PERIODIC TABLE -->
+            <div class="periodicTable" id="displayTable"></div>
+
+        </div>
+    </main>
+
+    <!-- POPUP -->
     <div class="modalContainer" id="modalContainer">
 
         <div class="modalBox" id="modalBox">
 
-            <!-- X BUTTON -->
+            <!-- CLOSE BUTTON -->
             <button
                 class="closeButton"
                 id="closeModal"
