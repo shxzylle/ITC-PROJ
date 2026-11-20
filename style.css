@@ -72,7 +72,7 @@ header h1 {
 }
 
 header p {
-    color: #bb6c60;
+    color: #aaa;
 
     font-size: clamp(15px, 1.5vw, 24px);
     font-family: 'Michland Script', cursive;
@@ -142,17 +142,10 @@ header p {
 
     padding: 3px;
 
-<<<<<<< HEAD
     border: 1px solid #53181866;
     border-radius: 5px;
 
     color: rgb(255, 255, 255);
-=======
-    border: 1px solid rgba(255, 249, 249, 0.4);
-    border-radius: 5px;
-
-    color: #fff9f9;
->>>>>>> 9ed42142e18d693ac569666d7a79d511b472970d
     cursor: pointer;
 
     transition: 0.2s ease;
@@ -224,7 +217,6 @@ header p {
 }
 
 .transition-metal {
-<<<<<<< HEAD
     background-color: #FFF0B8;
 }
 
@@ -258,49 +250,6 @@ header p {
 
 .unknown {
     background-color: #aeffcd;
-=======
-    background-color: #e6c84c;
-    color: #59434A;
-}
-
-.post-transition-metal {
-    background-color: #65c7a5;
-    color: #59434A;
-}
-
-.metalloid {
-    background-color: #42a5d5;
-    color: #59434A;
-}
-
-.nonmetal {
-    background-color: #7c83e8;
-    color: #59434A;
-}
-
-.halogen {
-    background-color: #bb77e8;
-    color: #59434A;
-}
-
-.noble-gas {
-    background-color: #ed8bc2;
-    color: #59434A;
-}
-
-.lanthanide {
-    background-color: #55c6c1;
-}
-
-.actinide {
-    background-color: #91a7e8;
-    color: #59434A;
-}
-
-.unknown {
-    background-color: #bed38c;
-    color: #59434A;
->>>>>>> 9ed42142e18d693ac569666d7a79d511b472970d
 }
 
 /* =========================================
@@ -527,11 +476,7 @@ header p {
 
 .modalTitle p {
     color: #c97a77;
-<<<<<<< HEAD
     font-size: 18px;
-=======
-    font-size: 14px;
->>>>>>> 9ed42142e18d693ac569666d7a79d511b472970d
 }
 
 /* =========================================
