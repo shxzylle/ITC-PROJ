@@ -1,18 +1,22 @@
 
 /* =========================================
-   ITO UNG GENERAL STYLING
+   GENERAL STYLING
 ========================================= */
+
 @font-face {
     font-family: 'Muthiara';
-    src: url('fonts/Muthiara.otf') format('truetype');
+    src: url('fonts/Muthiara.otf') format('opentype');
 }
-
 
 @font-face {
-    font-family: 'Cream Cake';
-    src: url('fonts/Cream\ Cake.otf') format('truetype');
+    font-family: 'Michland Script';
+    src: url('fonts/Michland Script.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Mocha Squishy';
+    src: url('fonts/Mocha Squishy.otf') format('opentype');
+}
 
 * {
     margin: 0;
@@ -21,11 +25,17 @@
 }
 
 body {
+    width: 100%;
+    min-height: 100vh;
+
     background-image: url("images/bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    font-family: 'Michland Script', cursive;
+    color: #59434A;
 }
 
 /* =========================================
@@ -34,44 +44,72 @@ body {
 
 header {
     text-align: center;
-    padding: 30px 15px;
+    padding: 10px 15px 5px;
 }
 
 header h1 {
-    border: 5px dashed pink;
-    border-radius: 50px;
+    border: 4px dashed pink;
+    border-radius: 35px;
+
     text-align: center;
     font-family: 'Muthiara', cursive;
-    font-size: 75px;   
-    margin-top: 10px; 
-    color: #E94B72
-    
+
+    font-size: clamp(25px, 3.5vw, 55px);
+
+    margin-top: 5px;
+    padding: 8px 15px;
+
+    color: #E94B72;
 }
 
 header p {
     color: #aaa;
-    font-size: 50px;
-    font-family: 'Cream Cake', cursive;
+
+    font-size: clamp(15px, 1.5vw, 24px);
+    font-family: 'Michland Script', cursive;
+
+    margin-top: 3px;
+}
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.tableWrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 3vw 2vh;
+
+    overflow: visible;
 }
 
 /* =========================================
    PERIODIC TABLE
 ========================================= */
 
-.tableWrapper {
-    width: 100%;
-    overflow-x: auto;
-    padding: 20px;
-}
-
 .periodicTable {
     display: grid;
 
-    grid-template-columns: repeat(18, minmax(60px, 1fr));
-    grid-template-rows: repeat(7, 90px) 30px 90px 90px;
+    width: 97%;
+    max-width: 1600px;
+
+    grid-template-columns: repeat(18, minmax(0, 1fr));
+
+    grid-template-rows:
+        repeat(7, minmax(0, 1fr))
+        8px
+        repeat(2, minmax(0, 1fr));
 
     gap: 5px;
-    min-width: 1200px;
+
+    min-width: 0;
+
+    height: 63vh;
+    max-height: 620px;
 }
 
 /* =========================================
@@ -83,9 +121,14 @@ header p {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
-    padding: 5px;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 3px;
 
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 5px;
@@ -97,26 +140,49 @@ header p {
 }
 
 .element:hover {
-    transform: scale(1.12);
+    transform: scale(1.08);
     z-index: 10;
 
     box-shadow: 0 0 15px rgb(112, 17, 91);
     filter: brightness(1.3);
 }
 
+/* ATOMIC NUMBER */
+
 .number {
-    font-size: 11px;
+    position: absolute;
+
+    top: 3px;
+    left: 4px;
+
+    font-family: 'Mocha Squishy', cursive;
+    font-size: clamp(7px, 0.65vw, 11px);
 }
+
+/* ELEMENT SYMBOL */
 
 .symbol {
-    font-size: 25px;
+    font-family: 'Mocha Squishy', cursive;
+
+    font-size: clamp(12px, 1.3vw, 22px);
+
     font-weight: bold;
     text-align: center;
+
+    line-height: 1.2;
 }
 
+/* ELEMENT NAME */
+
 .name {
-    font-size: 10px;
+    font-family: 'Mocha Squishy', cursive;
+
+    font-size: clamp(6px, 0.65vw, 9px);
+
     text-align: center;
+    line-height: 1.2;
+
+    overflow-wrap: anywhere;
 }
 
 /* =========================================
@@ -175,27 +241,40 @@ header p {
    CATEGORY LEGEND
 ========================================= */
 
-.legend {
+.legendContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
-    gap: 12px;
-    padding: 25px;
+    width: 100%;
+
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.legend {
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+
+    gap: 8px 35px;
 }
 
 .legendItem {
     display: flex;
     align-items: center;
-    gap: 7px;
 
-    font-size: 12px;
+    gap: 10px;
+
+    font-size: clamp(14px, 1.1vw, 19px);
 }
 
 .legendColor {
-    width: 15px;
-    height: 15px;
-    border-radius: 3px;
+    width: clamp(17px, 1.5vw, 22px);
+    height: clamp(17px, 1.5vw, 22px);
+
+    border-radius: 5px;
+    flex-shrink: 0;
 }
 
 /* =========================================
@@ -279,7 +358,7 @@ header p {
 }
 
 /* =========================================
-   X CLOSE BUTTON
+   CLOSE BUTTON
 ========================================= */
 
 .closeButton {
@@ -376,17 +455,63 @@ header p {
 }
 
 .modalInfo strong {
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 /* =========================================
-   RESPONSIVE POPUP
+   SHORT SCREEN ADJUSTMENT
+========================================= */
+
+@media screen and (max-height: 750px) {
+
+    header {
+        padding-top: 5px;
+        padding-bottom: 2px;
+    }
+
+    header h1 {
+        font-size: clamp(22px, 3vw, 40px);
+        padding: 5px 10px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .legendContainer {
+        margin-top: 3px;
+        margin-bottom: 5px;
+    }
+
+    .legend {
+        gap: 3px 20px;
+    }
+
+    .periodicTable {
+        height: 53vh;
+    }
+}
+
+/* =========================================
+   MOBILE ADJUSTMENT
 ========================================= */
 
 @media screen and (max-width: 600px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     header h1 {
         font-size: 25px;
+    }
+
+    .tableWrapper {
+        overflow-x: auto;
+    }
+
+    .periodicTable {
+        min-width: 900px;
     }
 
     .modalBox {
@@ -410,5 +535,4 @@ header p {
     .modalInfo {
         font-size: 14px;
     }
-
 }

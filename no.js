@@ -311,4 +311,4 @@ legendData.forEach(function(item) {
 
 });
 
-document.body.appendChild(legend);
+document.getElementById("legendContainer").appendChild(legend);
